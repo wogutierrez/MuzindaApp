@@ -8,34 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>MuzindaApp</h1> <!-- Main title of the app -->
+        <h1>MuzindaApp</h1>
+    </header>
+    
+    <main>
+        <h2>Welcome to MuzindaApp!</h2>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li> <!-- Link to Home section -->
-                <li><a href="#decks">Decks</a></li> <!-- Link to Decks section -->
-                <li><a href="#import">Import CSV</a></li> <!-- Link to Import section -->
+                <li><button id="new-deck">Create New Deck</button></li>
+                <li><input type="file" id="file-input" accept=".csv"></li>
+                <li><button id="view-cards" style="display: none;">View Cards</button></li>
+                <li><button id="start-studying" style="display: none;">Start Studying</button></li>
             </ul>
         </nav>
-    </header>
-
-    <main>
-        <section id="home">
-            <h2>Welcome to MuzindaApp</h2>
-            <p>Start creating decks and learning Shona today!</p> <!-- Introductory text -->
-        </section>
-
-        <section id="decks">
-            <h2>Your Decks</h2>
-            <!-- This div will hold the decks created by the user -->
-            <div id="deck-container"></div>
-            <button id="new-deck">Create New Deck</button> <!-- Button to create a new deck -->
-        </section>
-
-        <section id="import">
-            <h2>Import Cards from CSV</h2>
-            <input type="file" id="csv-file" accept=".csv"> <!-- Input to upload CSV file -->
-            <button id="import-button">Import</button> <!-- Button to trigger CSV import -->
-        </section>
+        
+        <div id="deck-container">
+            <!-- Decks will be displayed here -->
+        </div>
     </main>
 
     <script src="script.js"></script> <!-- Link to the JavaScript file -->
